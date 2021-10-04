@@ -22,9 +22,14 @@ const initialState = {};
 
 // Optional redux state logger
 // provide useful log message in browser console regarding redux state
-const reduxLogger = createLogger();
 
-const middlewares = [thunk.withExtraArgument({ getFirebase, getFirestore })];
+let middlewares = [thunk.withExtraArgument({ getFirebase, getFirestore })];
+
+if (process.env.NODE_ENV !== 'production') {
+  const reduxLogger = createLogger();
+
+  middlewares = [...middlewares, reduxLogger];
+}
 
 // App store
 export const store = createStore(
