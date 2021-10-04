@@ -18,7 +18,7 @@ describe('Time format', () => {
     const firebaseTimestamp = new firebase.firestore.Timestamp(inputDate.seconds, inputDate.nanoseconds);
 
     const formatStatus = formatTimeFromNow(firebaseTimestamp);
-    const result = 'over 50 years ago';
+    const result = 'about 51 years ago';
 
     expect(result).toEqual(formatStatus);
   });

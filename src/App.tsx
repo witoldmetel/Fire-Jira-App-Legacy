@@ -29,7 +29,7 @@ const TaskEdit = React.lazy(() => import('./components/Task/TaskEdit/TaskEdit'))
 const UnknownPage = React.lazy(() => import('./components/UnknownPage/UnknownPage'));
 
 export interface Props {
-  projects: Project[];
+  projects?: Project[];
 }
 
 class App extends React.Component<Props> {
