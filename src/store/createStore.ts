@@ -1,13 +1,13 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import { createLogger } from 'redux-logger';
 import { getFirebase } from 'react-redux-firebase';
 import { reduxFirestore, getFirestore, createFirestoreInstance } from 'redux-firestore';
+import thunk from 'redux-thunk';
+import { createLogger } from 'redux-logger';
 
-import 'firebase/firestore';
+import 'firebase/compat/firestore';
 
 import firebase from '../services/firebase';
-import reducers from './reducers';
+import rootReducer from './reducers';
 
 // Optional react-redux-firebase config
 const rrfConfig = {
@@ -22,13 +22,13 @@ const initialState = {};
 
 // Optional redux state logger
 // provide useful log message in browser console regarding redux state
-// const reduxLogger = createLogger();
+const reduxLogger = createLogger();
 
 const middlewares = [thunk.withExtraArgument({ getFirebase, getFirestore })];
 
 // App store
 export const store = createStore(
-  reducers,
+  rootReducer,
   initialState,
   compose(applyMiddleware(...middlewares), reduxFirestore(firebase))
 );
