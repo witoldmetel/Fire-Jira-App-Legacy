@@ -1,4 +1,6 @@
-# Fire Jira
+# Fire Jira (Deprecated)
+
+App won't be maintained and improve anymore. I prepared a new version of this app. Let's check it: 
 
 ## App Info
 
