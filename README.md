@@ -1,6 +1,6 @@
 # Fire Jira (Deprecated)
 
-App won't be maintained and improve anymore. I prepared a new version of this app. Let's check it: 
+App won't be maintained and improve anymore. I prepared a new version of this app. Let's check it: https://github.com/witoldmetel/Fire-Jira-App
 
 ## App Info
 
